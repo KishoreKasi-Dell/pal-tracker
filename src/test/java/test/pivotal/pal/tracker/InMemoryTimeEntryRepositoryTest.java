@@ -14,9 +14,8 @@ public class InMemoryTimeEntryRepositoryTest {
     @Test
     public void create() throws Exception {
         InMemoryTimeEntryRepository repo = new InMemoryTimeEntryRepository();
-
-        long projectId = 123L;
         long userId = 456L;
+        long projectId =123L;
         TimeEntry createdTimeEntry = repo.create(new TimeEntry(projectId, userId, LocalDate.parse("2017-01-08"), 8));
 
         long timeEntryId = 1L;
