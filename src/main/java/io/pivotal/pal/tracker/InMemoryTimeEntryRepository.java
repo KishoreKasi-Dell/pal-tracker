@@ -18,7 +18,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
     }
 
     @Override
-    public TimeEntry find(long id) {
+    public TimeEntry find(Long id) {
         return timeEntriesRepo.get(id);
     }
 
@@ -28,7 +28,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
     }
 
     @Override
-    public TimeEntry update(long id, TimeEntry timeEntry) {
+    public TimeEntry update(Long id, TimeEntry timeEntry) {
 
         if (timeEntriesRepo.get(id) != null) {
             timeEntry.setId(id);
